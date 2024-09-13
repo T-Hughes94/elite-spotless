@@ -13,42 +13,33 @@ const Header = () => {
         {/* Company Logo */}
         <div className="flex items-center space-x-3">
           <Image
-            src="/mockup.png"
+            src="/ecslogo.png"
             alt="Mock-Up Construction Logo"
             width={50}
             height={50}
             className="rounded-full"
           />
-          <div className="text-2xl font-bold">Mock-Up Construction Supply</div>
+          <div className="text-2xl font-bold">Elite Spotless Cleaning</div>
         </div>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-yellow-500 transition-colors duration-300">
+          <Link href="/" className="hover:text-gray-900 transition-colors duration-300">
             Home
           </Link>
-          <Link href="/about" className="hover:text-yellow-500 transition-colors duration-300">
+          <Link href="/about" className="hover:text-gray-900 transition-colors duration-300">
             About
           </Link>
-          <Link href="/services" className="hover:text-yellow-500 transition-colors duration-300">
+          <Link href="/services" className="hover:text-gray-900 transition-colors duration-300">
             Services
           </Link>
-          <Link href="/contact" className="hover:text-yellow-500 transition-colors duration-300">
+          <Link href="/contact" className="hover:text-gray-900 transition-colors duration-300">
             Contact
           </Link>
         </nav>
 
-        {/* Contact Info */}
-        <div className="hidden md:flex items-center space-x-4">
-          <div className="text-sm">
-            <p>1234 Construction Ave</p>
-            <p>Building City, BC 56789</p>
-          </div>
-          <div className="text-sm">
-            <p>Email: info@mockupconstruction.com</p>
-            <p>Phone: (123) 456-7890</p>
-          </div>
-        </div>
+    
+       
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -66,7 +57,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-gray-700">
+        <nav className="md:hidden bg-[#94c2d2]">
           <Link href="/" className="block px-4 py-2 hover:bg-gray-600">
             Home
           </Link>
