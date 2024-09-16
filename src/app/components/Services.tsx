@@ -8,7 +8,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-6">
         {/* Header and Quick Description */}
         <div className="text-center mb-40">
-          <h2 className="text-5xl font-extrabold text-gray-950 mb-8 underline">
+          <h2 className="text-5xl font-extrabold text-gray-100 mb-8 underline">
             N.Y.C Cleaning Services
           </h2>
           <p className="px-4 text-xl font-bold text-gray-950 max-w-4xl mx-auto">
