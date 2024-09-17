@@ -8,12 +8,19 @@ import ecslogo from '/public/ecslogo.png'; // Ensure the path to your logo is co
 
 const Hero = () => {
   return (
-    <section
-      className="relative h-screen flex items-center justify-center bg-fixed bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${ecslogo.src})`, // Using Next.js optimized image
-      }}
-    >
+    <section className="relative h-screen flex items-center justify-center bg-fixed bg-cover bg-center">
+      {/* Background Image with Next.js Image Optimization */}
+      <Image
+        src={ecslogo}
+        alt="Background Image"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        quality={100}
+        className="absolute inset-0 -z-10"
+        priority // Ensures it loads fast as it's above the fold
+      />
+
       {/* Lightened Overlay */}
       <div className="absolute inset-0 bg-black/40"></div> {/* Reduced opacity to 40% */}
 
@@ -21,7 +28,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-start text-white">
         {/* Logo and Title */}
         <div className="mb-8">
-          <h1 className="text-6xl text-centered font-bold leading-tight underline decoration-[#94c2d2]">
+          <h1 className="text-6xl text-center font-bold leading-tight underline decoration-[#94c2d2]">
             Elite Spotless Cleaning
           </h1>
           <p className="mt-4 text-2xl font-bold max-w-2xl">
@@ -44,5 +51,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 

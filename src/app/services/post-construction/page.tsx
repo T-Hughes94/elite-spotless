@@ -1,6 +1,7 @@
 // app/services/post-construction/page.tsx
 import Header from '../../components/Header';
-import { FaTools } from 'react-icons/fa';
+import { FaHome, FaTruckMoving, FaTools } from 'react-icons/fa';
+
 
 export default function PostConstructionPage() {
   return (

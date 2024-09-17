@@ -1,7 +1,7 @@
 // app/about/page.tsx
 import Header from '../components/Header';
 import Image from 'next/image'; // Ensure the path to your image is correct
-import teamImage from '/public/emp2.jpg'; // Placeholder image, replace with an actual team photo
+import temImage from '/public/emp22.jpg'; // Placeholder image, replace with an actual team photo
 import { FaHandsHelping, FaMedal, FaUsers } from 'react-icons/fa';
 
 const AboutPage = () => {
@@ -53,7 +53,7 @@ const AboutPage = () => {
           {/* Team Image */}
           <div className="relative w-full lg:w-1/2 mb-8 lg:mb-0">
             <Image
-              src={teamImage}
+              src={temImage}
               alt="Our Team"
               className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500"
               width={600}
