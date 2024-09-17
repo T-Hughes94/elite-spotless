@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ServiceItem from './ServiceItem';
 import { FaHome, FaTruckMoving, FaTools } from 'react-icons/fa'; // Import your icons
 

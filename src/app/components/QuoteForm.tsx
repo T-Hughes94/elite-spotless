@@ -153,7 +153,7 @@ const QuoteForm: React.FC = () => {
   return (
     <div className="w-full bg-white py-16">
       <div id="quote" className="max-w-[1040px] mx-auto p-4 bg-[#94c2d2] shadow-lg rounded-lg">
-        <h1 className="py-4 text-4xl font-bold text-center text-[#030712]">Get A Quote</h1>
+        <h1 className="py-4 text-4xl font-bold text-center text-white underline">Get A Quote</h1>
         {errorMessage && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
             <strong className="font-bold">Error:</strong>
@@ -338,7 +338,7 @@ const QuoteForm: React.FC = () => {
             <div className='w-full text-center'>
               <button
                 type='submit'
-                className='bg-gray-950 text-white py-3 px-6 mt-4 rounded-lg uppercase tracking-wide font-semibold hover:bg-gray-500 focus:outline-none'
+                className='bg-gray-100 text-black py-3 px-6 mt-4 rounded-lg uppercase tracking-wide font-semibold border-2 border-white hover:bg-[#94c2d2] focus:outline-none'
               >
                 Get My Quote
               </button>

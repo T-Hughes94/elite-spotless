@@ -8,18 +8,15 @@ import ecslogo from '/public/ecslogo.png'; // Ensure the path to your logo is co
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-fixed bg-cover bg-center">
-      {/* Background Image with Next.js Image Optimization */}
-      <Image
-        src={ecslogo}
-        alt="Background Image"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        quality={100}
-        className="absolute inset-0 -z-10"
-        priority // Ensures it loads fast as it's above the fold
-      />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Parallax Background Image */}
+      <div
+        className="absolute inset-0 -z-10 bg-fixed bg-center bg-cover"
+        style={{
+          backgroundImage: `url(${ecslogo.src})`,
+          backgroundAttachment: 'fixed', // This creates the parallax effect
+        }}
+      ></div>
 
       {/* Lightened Overlay */}
       <div className="absolute inset-0 bg-black/40"></div> {/* Reduced opacity to 40% */}
@@ -51,6 +48,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
 

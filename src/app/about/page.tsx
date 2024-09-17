@@ -1,4 +1,5 @@
-// app/about/page.tsx
+// src/app/about/page.tsx
+
 import Header from '../components/Header';
 import Image from 'next/image'; // Ensure the path to your image is correct
 import temImage from '/public/emp22.jpg'; // Placeholder image, replace with an actual team photo
@@ -8,15 +9,28 @@ const AboutPage = () => {
   return (
     <>
       <Header />
-      <div className="container mx-auto py-16 px-6">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-6">About Elite Spotless Cleaning</h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Welcome to Elite Spotless Cleaning, where we provide top-notch cleaning services tailored to meet your needs. With a passion for excellence, we ensure every space is transformed into a pristine sanctuary.
-          </p>
-        </section>
 
+      {/* About Header Section */}
+      <section
+        className="relative pt-28 md:pt-20 pb-10 md:pb-10 h-[200px] md:h-[200px] bg-fixed bg-center bg-cover"
+        style={{ backgroundImage: "url('/ecslogo.png')" }} // Use an appropriate background image for the about page
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for contrast */}
+        <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center h-full">
+          
+          {/* Left Side: Title */}
+          <div className="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+            <div className="flex items-center justify-center md:justify-start mb-2">
+              <div className="h-1 w-16 bg-[#94c2d2]"></div>
+              <span className="ml-4 text-lg font-medium text-white">About Us</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Learn More About Our Journey</h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content Section */}
+      <div className="container mx-auto py-16 px-6">
         {/* Core Values Section */}
         <section className="bg-white py-16 px-6 rounded-lg shadow-lg mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-10">Our Core Values</h2>
@@ -109,3 +123,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
