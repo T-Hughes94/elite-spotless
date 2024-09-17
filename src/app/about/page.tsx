@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Image from 'next/image'; // Ensure the path to your image is correct
 import temImage from '/public/emp22.jpg'; // Placeholder image, replace with an actual team photo
 import { FaHandsHelping, FaMedal, FaUsers } from 'react-icons/fa';
+import Footer from '../components/Footer';
 
 const AboutPage = () => {
   return (
@@ -118,6 +119,7 @@ const AboutPage = () => {
           </div>
         </section>
       </div>
+    <Footer/>
     </>
   );
 };

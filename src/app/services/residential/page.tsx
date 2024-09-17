@@ -1,6 +1,7 @@
 // app/services/residential/page.tsx
 import Header from '../../components/Header';
 import { FaHome, FaTruckMoving, FaTools } from 'react-icons/fa';
+import Footer from '../../components/Footer';
 
 
 export default function ResidentialPage() {
@@ -64,6 +65,7 @@ export default function ResidentialPage() {
           </a>
         </section>
       </div>
+    <Footer/>
     </>
   );
 }

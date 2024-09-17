@@ -1,6 +1,7 @@
 // app/services/move-out/page.tsx
 import Header from '../../components/Header';
 import { FaTruckMoving } from 'react-icons/fa';
+import Footer from '../../components/Footer';
 
 export default function MoveOutPage() {
   return (
@@ -76,6 +77,7 @@ export default function MoveOutPage() {
           </a>
         </section>
       </div>
+    <Footer/>
     </>
   );
 }

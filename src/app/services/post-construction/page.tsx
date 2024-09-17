@@ -1,6 +1,7 @@
 // app/services/post-construction/page.tsx
 import Header from '../../components/Header';
 import { FaHome, FaTruckMoving, FaTools } from 'react-icons/fa';
+import Footer from '../../components/Footer';
 
 
 export default function PostConstructionPage() {
@@ -59,6 +60,7 @@ export default function PostConstructionPage() {
           </a>
         </section>
       </div>
+    <Footer/>
     </>
   );
 }

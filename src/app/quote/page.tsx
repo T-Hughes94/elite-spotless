@@ -3,6 +3,7 @@
 import Header from '../components/Header';
 import QuoteForm from '../components/QuoteForm'; // Assuming the form is in this component
 import Image from 'next/image';
+import Footer from '../components/Footer';
 
 export default function QuotePage() {
   return (
@@ -54,7 +55,7 @@ export default function QuotePage() {
         </div>
       </section>
 
-      
+    <Footer/>
     </>
   );
 }
