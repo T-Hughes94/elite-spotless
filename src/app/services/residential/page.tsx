@@ -1,25 +1,37 @@
-// app/services/residential/page.tsx
 import Header from '../../components/Header';
-import { FaHome, FaTruckMoving, FaTools } from 'react-icons/fa';
 import Footer from '../../components/Footer';
-
 
 export default function ResidentialPage() {
   return (
     <>
       <Header />
-      <div className="container mx-auto py-10 px-6">
-        {/* Hero Section */}
-        <section className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#94c2d2] to-[#4a90e2] text-white p-8 rounded-lg shadow-lg mb-10">
-          <div className="flex items-center space-x-4 mb-6 md:mb-0">
-            <FaHome size={64} className="text-white" />
-            <h1 className="text-4xl font-bold">Residential Cleaning</h1>
-          </div>
-          <p className="text-lg">
-            Keep your home spotless and comfortable with our professional residential cleaning services. Choose from our basic, deep, or regular maintenance cleaning packages tailored to your needs.
-          </p>
-        </section>
 
+      {/* Hero Section Header */}
+      <section
+        className="relative pt-28 md:pt-10 pb-10 md:pb-16 h-[250px] md:h-[250px] bg-fixed bg-center bg-cover"
+        style={{ backgroundImage: "url('/ecslogo.png')" }} // Use an appropriate background image for the residential cleaning page
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for contrast */}
+
+        {/* Container for Content */}
+        <div className="container mx-auto px-6 relative z-10 flex flex-col justify-center h-full">
+          
+          {/* Hero Section Content Left-Aligned for Both Mobile and Desktop */}
+          <div className="w-full md:w-1/2 text-left mb-10 md:mb-0 flex flex-col justify-center h-full space-y-4">
+            {/* Subtext "Residential Cleaning" */}
+            <div className="flex items-center mb-2">
+              <div className="h-1 w-16 bg-[#94c2d2]"></div>
+              <span className="ml-4 text-lg font-medium text-white">Residential Cleaning</span>
+            </div>
+
+            {/* Hero Main Text */}
+            <h2 className="text-3xl md:text-5xl font-bold text-white">Professional Residential Cleaning Services</h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content Section */}
+      <div className="container mx-auto py-10 px-6">
         {/* Service Details Section */}
         <section className="bg-white rounded-lg shadow-lg p-8 mb-10">
           {/* Basic Cleaning */}
@@ -65,8 +77,10 @@ export default function ResidentialPage() {
           </a>
         </section>
       </div>
-    <Footer/>
+      
+      <Footer />
     </>
   );
 }
+
 

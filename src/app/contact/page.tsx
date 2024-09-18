@@ -1,9 +1,6 @@
-// src/app/contact/page.tsx
-
 "use client";
 
 import Header from '../components/Header';
-import Image from 'next/image';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Footer from '../components/Footer';
@@ -66,18 +63,24 @@ const ContactPage = () => {
 
       {/* Contact Header Section */}
       <section
-        className="relative pt-28 md:pt-20 pb-10 md:pb-10 h-[200px] md:h-[200px] bg-fixed bg-center bg-cover"
+        className="relative pt-28 md:pt-10 pb-10 md:pb-16 h-[250px] md:h-[250px] bg-fixed bg-center bg-cover"
         style={{ backgroundImage: "url('/ecslogo.png')" }} // Use an appropriate background image for the contact page
       >
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for contrast */}
-        <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center h-full">
-          {/* Left Side: Title */}
-          <div className="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-            <div className="flex items-center justify-center md:justify-start mb-2">
+
+        {/* Container for Content */}
+        <div className="container mx-auto px-6 relative z-10 flex flex-col justify-center h-full">
+          
+          {/* Hero Section Content Left-Aligned for Both Mobile and Desktop */}
+          <div className="w-full md:w-1/2 text-left mb-10 md:mb-0 flex flex-col justify-center h-full space-y-4">
+            {/* Subtext "Get in Touch" */}
+            <div className="flex items-center mb-2">
               <div className="h-1 w-16 bg-[#94c2d2]"></div>
               <span className="ml-4 text-lg font-medium text-white">Get in Touch</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Elite Spotless Cleaning</h2>
+
+            {/* Hero Main Text */}
+            <h2 className="text-3xl md:text-5xl font-bold text-white">Contact Elite Spotless Cleaning</h2>
           </div>
         </div>
       </section>
@@ -175,16 +178,15 @@ const ContactPage = () => {
           <p className="text-white text-lg max-w-2xl mx-auto">
             We appreciate your interest in our services and look forward to the opportunity to serve you. Your satisfaction is our priority, and we are committed to providing exceptional cleaning solutions tailored to your needs.
           </p>
-          <p className="text-white mt-4">
-            If you have any questions or require immediate assistance, please do not hesitate to call us. We are here to help!
-          </p>
         </div>
       </section>
-    <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default ContactPage;
+
+
 
 

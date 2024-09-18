@@ -1,26 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/legacy/image";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false); // State to manage dropdown
-  const dropdownRef = useRef<HTMLDivElement | null>(null); // Add specific type for ref
+  const [isOpen, setIsOpen] = useState(false); // State for the mobile menu
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for the desktop dropdown
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsServicesOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // Function to handle navigation and close menus
+  const handleNavigateAndClose = () => {
+    setIsOpen(false);
+    setIsDropdownOpen(false);
+  };
 
   return (
     <header className="bg-[#94c2d2] text-white shadow-lg sticky top-0 w-full z-50">
@@ -29,7 +20,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <Image
             src="/ecslogo.png"
-            alt="Mock-Up Construction Logo"
+            alt="Elite Spotless Cleaning Logo"
             width={50}
             height={50}
             className="rounded-full"
@@ -37,54 +28,52 @@ const Header = () => {
           <div className="text-2xl font-bold">Elite Spotless Cleaning</div>
         </div>
 
-        {/* Navigation Links */}
-        <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-gray-900 transition-colors duration-300">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden md:flex space-x-8 items-center">
+          <Link href="/" className="hover:text-black transition-colors duration-300">
             Home
           </Link>
-          <Link href="/about" className="hover:text-gray-900 transition-colors duration-300">
+          <Link href="/about" className="hover:text-black transition-colors duration-300">
             About
           </Link>
-          <div className="relative" ref={dropdownRef}>
+
+          {/* Services Dropdown for Desktop */}
+          <div className="relative">
             <button
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="flex items-center hover:text-gray-900 transition-colors duration-300 focus:outline-none"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center hover:text-black transition-colors duration-300 focus:outline-none"
             >
               Services
               <svg
-                className={`w-4 h-4 ml-1 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''
-                  }`}
+                className={`w-4 h-4 ml-1 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            {/* Dropdown Menu */}
-            {isServicesOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-lg">
-                <Link href="/services/residential" className="block px-4 py-2 hover:bg-gray-200">
+
+            {/* Dropdown Menu for Desktop */}
+            {isDropdownOpen && (
+              <div className="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-md border border-gray-200">
+                <Link href="/services/residential" className="block px-4 py-3 hover:bg-gray-100" onClick={handleNavigateAndClose}>
                   Residential
                 </Link>
-                <Link href="/services/post-construction" className="block px-4 py-2 hover:bg-gray-200">
+                <Link href="/services/post-construction" className="block px-4 py-3 hover:bg-gray-100" onClick={handleNavigateAndClose}>
                   Post Construction
                 </Link>
-                <Link href="/services/move-out" className="block px-4 py-2 hover:bg-gray-200">
+                <Link href="/services/move-out" className="block px-4 py-3 hover:bg-gray-100" onClick={handleNavigateAndClose}>
                   Move Out
                 </Link>
               </div>
             )}
           </div>
-          <Link href="/quote" className="hover:text-gray-900 transition-colors duration-300">
+
+          <Link href="/quote" className="hover:text-black transition-colors duration-300">
             Get a Quote
           </Link>
-          <Link href="/contact" className="hover:text-gray-900 transition-colors duration-300">
+          <Link href="/contact" className="hover:text-black transition-colors duration-300">
             Contact
           </Link>
         </nav>
@@ -96,18 +85,8 @@ const Header = () => {
             className="focus:outline-none"
             aria-label="Toggle Menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>
         </div>
@@ -115,38 +94,47 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-[#94c2d2]">
-          <Link href="/" className="block px-4 py-2 hover:bg-gray-600">
+        <nav className="md:hidden bg-[#94c2d2] px-4 py-6">
+          {/* Home Link */}
+          <Link href="/" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md font-bold" onClick={handleNavigateAndClose}>
             Home
           </Link>
-          <Link href="/about" className="block px-4 py-2 hover:bg-gray-600">
+
+          {/* About Link */}
+          <Link href="/about" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md font-bold" onClick={handleNavigateAndClose}>
             About
           </Link>
-          <div className="relative">
+
+          {/* Services Dropdown with Individual Links */}
+          <div className="border-b border-gray-300 mb-4 pb-4">
             <button
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="block w-full text-left px-4 py-2 hover:bg-gray-600"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full text-left px-4 py-3 text-white hover:bg-gray-500 rounded-md font-bold focus:outline-none"
             >
               Services
             </button>
-            {isServicesOpen && (
-              <div className="bg-[#94c2d2]">
-                <Link href="/services/residential" className="block px-6 py-2 hover:bg-gray-500">
+            {isDropdownOpen && (
+              <div className="px-2">
+                <Link href="/services/residential" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md" onClick={handleNavigateAndClose}>
                   Residential
                 </Link>
-                <Link href="/services/post-construction" className="block px-6 py-2 hover:bg-gray-500">
+                <Link href="/services/post-construction" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md" onClick={handleNavigateAndClose}>
                   Post Construction
                 </Link>
-                <Link href="/services/move-out" className="block px-6 py-2 hover:bg-gray-500">
+                <Link href="/services/move-out" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md" onClick={handleNavigateAndClose}>
                   Move Out
                 </Link>
               </div>
             )}
           </div>
-          <Link href="/quote" className="block px-4 py-2 hover:bg-gray-600">
+
+          {/* Get a Quote Link */}
+          <Link href="/quote" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md font-bold" onClick={handleNavigateAndClose}>
             Get a Quote
           </Link>
-          <Link href="/contact" className="block px-4 py-2 hover:bg-gray-600">
+
+          {/* Contact Link */}
+          <Link href="/contact" className="block px-4 py-3 text-white hover:bg-gray-500 rounded-md font-bold" onClick={handleNavigateAndClose}>
             Contact
           </Link>
         </nav>
@@ -156,3 +144,16 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
