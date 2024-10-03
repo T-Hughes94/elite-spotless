@@ -24,7 +24,7 @@ const AboutPage = () => {
             {/* Subtext "About Us" */}
             <div className="flex items-center mb-2">
               <div className="h-1 w-16 bg-[#94c2d2]"></div>
-              <span className="ml-4 text-lg font-medium text-white">About Us</span>
+              <span className="ml-4 text-lg font-medium text-white">Al Williams</span>
             </div>
 
             {/* Hero Main Text */}
@@ -122,6 +122,7 @@ const AboutPage = () => {
           </div>
         </section>
       </div>
+     
       <Footer />
     </>
   );

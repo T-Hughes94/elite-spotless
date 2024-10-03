@@ -179,7 +179,7 @@ const QuoteForm: React.FC = () => {
               </div>
               {/* Phone Field */}
               <div className='flex flex-col'>
-                <label className='uppercase text-sm font-semibold py-2'>Phone Number</label>
+                <label className='uppercase text-sm font-semibold py-2'>u a bitch</label>
                 <input
                   className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]'
                   type='tel'
