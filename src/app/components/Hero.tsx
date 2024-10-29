@@ -1,31 +1,31 @@
-// src/app/components/Hero.tsx
-
 "use client";
 
 import Link from 'next/link';
 import Image from 'next/image';
-import ecslogo from '/public/ecslogo.png'; // Ensure the path to your logo is correct
+import ecslogo from '/public/ecslogo.webp'; // Use the optimized WebP image
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Parallax Background Image */}
-      <div
-        className="absolute inset-0 -z-10 bg-fixed bg-center bg-cover"
-        style={{
-          backgroundImage: `url(${ecslogo.src})`,
-          backgroundAttachment: 'fixed', // This creates the parallax effect
-        }}
-      ></div>
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src={ecslogo}
+          alt="Elite Spotless Cleaning Background"
+          fill // Replaces layout="fill"
+          style={{ objectFit: 'cover' }} // Replaces objectFit prop
+          quality={75} // Set image quality to optimize performance
+          priority // Ensures the image is loaded with high priority
+        />
+      </div>
 
       {/* Lightened Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div> {/* Reduced opacity to 40% */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content Container */}
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-start text-white">
-        {/* Logo and Title */}
         <div className="mb-8">
-          <h1 className="text-6xl text-center font-bold leading-tight underline decoration-[#94c2d2]">
+          <h1 className="text-6xl font-bold leading-tight underline decoration-[#94c2d2]">
             Elite Spotless Cleaning
           </h1>
           <p className="mt-4 text-2xl font-bold max-w-2xl">
@@ -48,6 +48,9 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
 
 
 

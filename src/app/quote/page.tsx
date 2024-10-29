@@ -10,7 +10,7 @@ export default function QuotePage() {
       {/* Quote Header Section */}
       <section
         className="relative pt-28 md:pt-10 pb-10 md:pb-16 h-[250px] md:h-[250px] bg-fixed bg-center bg-cover"
-        style={{ backgroundImage: "url('/ecslogo.png')" }} // Use an appropriate background image for the quote page
+        style={{ backgroundImage: "url('/ecslogo.webp')" }} // Use an appropriate background image for the quote page
       >
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for contrast */}
 
@@ -45,11 +45,11 @@ export default function QuotePage() {
       </section>
 
       {/* Gratitude Section */}
-      <section className="py-12 bg-blue-900">
+      <section className="py-12 bg-[#94c2d2]">
         <div className="container mx-auto px-6 text-center">
           <h3 className="text-4xl font-semibold text-white mb-4">Thank You for Considering Elite Spotless Cleaning!</h3>
           <p className="text-white text-lg max-w-2xl mx-auto">
-            We appreciate your interest in our services and the opportunity to assist you with your cleaning needs. Your satisfaction is our top priority, and we look forward to serving you.
+            We appreciate your interest in our services and the opportunity to assist you with your cleaning needs.
           </p>
         </div>
       </section>

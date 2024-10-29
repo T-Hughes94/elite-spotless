@@ -19,11 +19,12 @@ const Header = () => {
         {/* Company Logo */}
         <div className="flex items-center space-x-3">
           <Image
-            src="/ecslogo.png"
+            src="/ecslogo.webp"
             alt="Elite Spotless Cleaning Logo"
             width={50}
             height={50}
             className="rounded-full"
+            loading="lazy"
           />
           <div className="text-2xl font-bold">Elite Spotless Cleaning</div>
         </div>

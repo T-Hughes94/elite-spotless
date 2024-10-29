@@ -9,7 +9,7 @@ const Services: React.FC = () => {
         {/* Header and Quick Description */}
         <div className="text-center mb-40">
           <h2 className="text-5xl font-extrabold text-gray-100 mb-8 underline">
-            N.Y.C Cleaning Services
+            NYC Cleaning Services
           </h2>
           <p className="px-4 text-xl font-bold text-gray-950 max-w-4xl mx-auto">
             At Elite Spotless Cleaning, we offer a wide range of professional cleaning services to suit all your needs. Whether you're moving in or out, need regular maintenance, or post-construction cleanup, our expert team is here to provide exceptional results.

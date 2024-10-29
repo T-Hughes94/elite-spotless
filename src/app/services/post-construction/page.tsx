@@ -10,7 +10,7 @@ export default function PostConstructionPage() {
       {/* Hero Section Header */}
       <section
         className="relative pt-28 md:pt-10 pb-10 md:pb-16 h-[250px] md:h-[250px] bg-fixed bg-center bg-cover"
-        style={{ backgroundImage: "url('/ecslogo.png')" }} // Use an appropriate background image for the post-construction cleaning page
+        style={{ backgroundImage: "url('/ecslogo.webp')" }} // Use an appropriate background image for the post-construction cleaning page
       >
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for contrast */}
 

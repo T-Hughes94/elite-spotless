@@ -18,6 +18,7 @@ const AboutUsHome = () => {
                 className="rounded-md transform hover:scale-105 transition-transform duration-500"
                 width={600}
                 height={400}
+                loading="lazy"
               />
             </div>
           </div>

@@ -12,7 +12,7 @@ const AboutPage = () => {
       {/* About Header Section */}
       <section
         className="relative pt-28 md:pt-10 pb-10 md:pb-16 h-[250px] md:h-[250px] bg-fixed bg-center bg-cover"
-        style={{ backgroundImage: "url('/ecslogo.png')" }} // Use an appropriate background image for the about page
+        style={{ backgroundImage: "url('/ecslogo.webp')" }} // Use an appropriate background image for the about page
       >
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for contrast */}
 
@@ -24,7 +24,7 @@ const AboutPage = () => {
             {/* Subtext "About Us" */}
             <div className="flex items-center mb-2">
               <div className="h-1 w-16 bg-[#94c2d2]"></div>
-              <span className="ml-4 text-lg font-medium text-white">Al Williams</span>
+              <span className="ml-4 text-lg font-medium text-white">About Us</span>
             </div>
 
             {/* Hero Main Text */}
@@ -63,34 +63,6 @@ const AboutPage = () => {
                 Our team is our greatest asset. We work collaboratively, supporting one another to provide the best service possible and create a positive work environment.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="flex flex-col lg:flex-row items-center lg:space-x-12 mb-16">
-          {/* Team Image */}
-          <div className="relative w-full lg:w-1/2 mb-8 lg:mb-0">
-            <Image
-              src={temImage}
-              alt="Our Team"
-              className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500"
-              width={600}
-              height={400}
-            />
-          </div>
-
-          {/* Team Content */}
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-4xl font-extrabold mb-6 text-gray-900">Meet Our Team</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              At the core of Elite Spotless Cleaning is a group of dedicated professionals who are passionate about providing exceptional service. Our team members are highly trained and take pride in their work, ensuring every job is done to perfection.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              We believe in fostering a positive work environment where every team member feels valued and empowered to deliver their best. This approach not only benefits our team but also ensures that our clients receive the highest level of service.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              From our front-line cleaners to our management team, every member of Elite Spotless Cleaning is committed to our mission of excellence and customer satisfaction.
-            </p>
           </div>
         </section>
 
