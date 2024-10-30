@@ -41,7 +41,7 @@ const AboutUsHome = () => {
           {/* Button */}
           <a
             href="/about"
-            className="inline-block mt-4 px-8 py-3 bg-[#94c2d2] text-white font-bold rounded-full shadow-md hover:bg-white hover:text-[#94c2d2] transition-colors duration-300"
+            className="inline-block mt-4 px-8 py-3 bg-[#94c2d2] text-white font-bold rounded-full border border-[inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 rounded-md border border-[inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 rounded-md border border-white hover:bg-white hover:text-[#94c2d2] hover:border-[#94c2d2] transition-colors duration-300] hover:bg-white hover:text-[#94c2d2] hover:border-[#94c2d2] transition-colors duration-300] shadow-md hover:bg-white hover:text-[#94c2d2] transition-colors duration-300"
           >
             Learn More About Us
           </a>

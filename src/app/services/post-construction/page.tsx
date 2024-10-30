@@ -67,7 +67,7 @@ export default function PostConstructionPage() {
           </p>
           <a
             href="/quote"
-            className="inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 border border-white rounded-md hover:border-[#94c2d2] transition-colors duration-300"
+            className="inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 rounded-md border border-white hover:bg-white hover:text-[#94c2d2] hover:border-[#94c2d2] transition-colors duration-300"
           >
             Get a Quote
           </a>

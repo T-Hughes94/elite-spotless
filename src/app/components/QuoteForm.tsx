@@ -338,7 +338,7 @@ const QuoteForm: React.FC = () => {
             <div className='w-full text-center'>
               <button
                 type='submit'
-                className='bg-gray-100 text-black py-3 px-6 mt-4 rounded-lg uppercase tracking-wide font-semibold border-2 border-white hover:bg-[#94c2d2] focus:outline-none'
+                className='bg-gray-100 text-black py-3 px-6 mt-4 rounded-lg uppercase tracking-wide font-semibold border-2 border-white hover:bg-[#94c2d2] hover:text-white focus:outline-none'
               >
                 Get My Quote
               </button>

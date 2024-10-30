@@ -38,7 +38,7 @@ const Hero = () => {
 
         {/* Quote Button */}
         <Link href="/quote">
-          <button className="mt-6 bg-gray-100 text-gray-900 px-8 py-3 rounded-md text-md hover:bg-[#94c2d2] transition-transform transform hover:scale-105">
+          <button className="mt-6 bg-[#94c2d2] text-white px-8 py-3 border border-white rounded-md text-md hover:bg-white hover:text-[#94c2d2] hover:border-[#94c2d2] transition-transform transform hover:scale-105">
             Get a Quote
           </button>
         </Link>
