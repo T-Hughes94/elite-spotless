@@ -32,8 +32,8 @@ export default function Home() {
         <meta name="twitter:image" content="/path-to-image.jpg" /> {/* Update with the correct image path */}
 
         {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" /> {/* Ensure you have the correct path */}
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Optional: Apple devices */}
+        <link rel="icon" href="/favicon.png" type="image/png" />
+
       </Head>
 
       <Header />

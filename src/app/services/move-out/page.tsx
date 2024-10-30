@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { FaTruckMoving } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function MoveOutPage() {
   return (
@@ -83,12 +84,12 @@ export default function MoveOutPage() {
           <p className="text-lg text-gray-700 mb-6">
             Contact us today to schedule a cleaning or get a customized quote. We are here to make your moving experience smoother and hassle-free!
           </p>
-          <a
+          <Link
             href="/quote"
-            className="inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 rounded-md hover:bg-[#4a90e2] transition-colors duration-300"
+            className="inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 border border-white rounded-md hover:border-[#94c2d2] transition-colors duration-300"
           >
             Get a Quote
-          </a>
+          </Link>
         </section>
       </div>
       <Footer />

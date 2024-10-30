@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Link from 'next/link';
 
 export default function ResidentialPage() {
   return (
@@ -71,7 +72,7 @@ export default function ResidentialPage() {
           </p>
           <a
             href="/quote"
-            className="inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 rounded-md hover:bg-[#4a90e2] transition-colors duration-300"
+            className="inline-block bg-[#94c2d2] text-white font-bold py-3 px-6 border border-white rounded-md hover:border-[#94c2d2] transition-colors duration-300"
           >
             Get a Quote
           </a>
