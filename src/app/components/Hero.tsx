@@ -1,24 +1,15 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
-import ecslogo from '/public/ecslogo.webp'; // Use the optimized WebP image
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={ecslogo}
-          alt="Elite Spotless Cleaning Background"
-          fill // Replaces layout="fill"
-          style={{ objectFit: 'cover' }} // Replaces objectFit prop
-          quality={75} // Set image quality to optimize performance
-          priority // Ensures the image is loaded with high priority
-        />
-      </div>
-
+    <section
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
+      style={{
+        backgroundImage: "url('/ecslogo.webp')", // Use your optimized image
+      }}
+    >
       {/* Lightened Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
@@ -48,6 +39,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
 
 
 
